@@ -1,3 +1,9 @@
+ion-item:nth-child(odd) {
+  --background: var(--odd-button);
+}
+ion-item:nth-child(even) {
+  --background: var(--even-button);
+}
 ion-label {
   height: 150px;
   line-height: 150px;
