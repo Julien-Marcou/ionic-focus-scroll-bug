@@ -1,0 +1,7 @@
+{
+  "name": "ionic-focus-scroll-bug",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
