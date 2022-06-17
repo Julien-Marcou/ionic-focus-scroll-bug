@@ -1,8 +1,17 @@
-ion-item:nth-child(odd) {
-  --background: var(--odd-button);
+ion-item:nth-child(5n) {
+  --background: #ffbe0b;
 }
-ion-item:nth-child(even) {
-  --background: var(--even-button);
+ion-item:nth-child(5n+1) {
+  --background: #fb5607;
+}
+ion-item:nth-child(5n+2) {
+  --background: #ff006e;
+}
+ion-item:nth-child(5n+3) {
+  --background: #8338ec;
+}
+ion-item:nth-child(5n+4) {
+  --background: #3a86ff;
 }
 ion-label {
   height: 150px;
