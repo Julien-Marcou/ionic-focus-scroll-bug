@@ -1,0 +1,47 @@
+// Add header translucent effect for all devices
+ion-header {
+
+  ion-toolbar {
+    --opacity: 0.8 !important;
+    --opacity-scale: 1 !important;
+  }
+
+  // Replace the .header-background with the :before to make it work for the `android` mode
+  .header-background {
+    display: none !important;
+  }
+  &:before {
+    content: "";
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+  }
+}
+
+// Add footer translucent effect for all devices
+ion-tab-bar {
+  background: transparent;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+
+  &:before {
+    content: "";
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: var(--ion-tab-bar-background, var(--ion-color-step-50, #f7f7f7));
+    opacity: 0.8;
+  }
+
+  ion-tab-button {
+    background: transparent;
+  }
+}

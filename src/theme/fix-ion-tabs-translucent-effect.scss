@@ -1,0 +1,26 @@
+// Tab bar height is hard coded, so add the value to a variable here to re-use it elsewhere
+ion-app {
+  &.md {
+    --tab-bar-height: 56px;
+  }
+  &.ios {
+    --tab-bar-height: 50px;
+  }
+}
+
+// Fix ion-tabs translucent effect not working
+ion-tabs {
+  display: block;
+
+  .tabs-inner {
+    height: 100%;
+    padding-bottom: var(--tab-bar-height);
+  }
+
+  ion-tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
