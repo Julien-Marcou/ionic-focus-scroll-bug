@@ -1,38 +1,42 @@
-// Tab bar height is hard coded, so add the value to a variable here to re-use it elsewhere
-ion-app {
-  &.md {
-    --tab-bar-height: 56px;
-  }
-  &.ios {
-    --tab-bar-height: 50px;
-  }
-}
+// Only enable the fix when this class is present (navigate to "Tab 2" to see it in action)
+.fix-ionic {
 
-// Fix ion-tabs translucent effect not working
-ion-tabs {
-  display: block;
-
-  .tabs-inner {
-    height: 100%;
-    padding-bottom: var(--tab-bar-height);
+  // Tab bar height is hard coded, so add the value to a variable here to re-use it elsewhere
+  ion-app {
+    &.md {
+      --tab-bar-height: 56px;
+    }
+    &.ios {
+      --tab-bar-height: 50px;
+    }
   }
 
-  ion-tab-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  // Fix ion-tabs translucent effect not working
+  ion-tabs {
+    display: block;
+
+    .tabs-inner {
+      height: 100%;
+      padding-bottom: var(--tab-bar-height);
+    }
+
+    ion-tab-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
-}
 
-ion-content {
+  ion-content {
 
-  &::part(background) {
-    bottom: 0;
-  }
+    &::part(background) {
+      bottom: 0;
+    }
 
-  &::part(scroll) {
-    bottom: 0;
-    padding-bottom: calc(var(--padding-bottom) + var(--keyboard-offset) + var(--tab-bar-height));
+    &::part(scroll) {
+      bottom: 0;
+      padding-bottom: calc(var(--padding-bottom) + var(--keyboard-offset) + var(--tab-bar-height));
+    }
   }
 }

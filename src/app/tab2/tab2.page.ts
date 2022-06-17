@@ -9,4 +9,12 @@ export class Tab2Page {
 
   constructor() {}
 
+  ionViewDidEnter() {
+    document.body.classList.add('fix-ionic');
+  }
+
+  ionViewDidLeave() {
+    document.body.classList.remove('fix-ionic');
+  }
+
 }
