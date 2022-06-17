@@ -24,3 +24,15 @@ ion-tabs {
     right: 0;
   }
 }
+
+ion-content {
+
+  &::part(background) {
+    bottom: 0;
+  }
+
+  &::part(scroll) {
+    bottom: 0;
+    padding-bottom: calc(var(--padding-bottom) + var(--keyboard-offset) + var(--tab-bar-height));
+  }
+}
